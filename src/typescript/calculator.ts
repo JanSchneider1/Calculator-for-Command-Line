@@ -8,16 +8,19 @@ export class Calculator{
 
     static greatestCommonDivisor(a: number, b: number){
         if (a == 0 || b == 0){
-            throw new Error(`a = ${a} and b = ${b} cannot be is zero`);
+            throw new Error(`a = ${a} or b = ${b} cannot be is zero`);
         }
         if (a < 0 || b < 0){
-            throw new Error(`a = ${a} and b = ${b} cannot be negative`);
+            throw new Error(`a = ${a} or b = ${b} cannot be negative`);
         }
-        // The bigger number should be first number to divide, the other the divisor
-        const aIsGreater = a > b;
-
-        let numberToDivide = aIsGreater ? a : b;
-        let divisor = aIsGreater ? b : a;
+        if (a % 1 != 0 || b % 1 != 0){
+            throw new Error(`a = ${a} or b = ${b} cannot be point numbers`);
+        }
+        if (b > a){
+            Calculator.greatestCommonDivisor(b, a);
+        }
+        let numberToDivide = a;
+        let divisor = b;
         let rest = numberToDivide % divisor;
         // When rest is zero, the last divisor divides both numbers
         while(rest != 0) {

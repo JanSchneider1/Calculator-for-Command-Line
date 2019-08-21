@@ -15,7 +15,7 @@ program
     });
 
 program
-    .command('gdc <a> <b>')
+    .command('gcd <a> <b>')
     .alias('greatest-common-divisor')
     .description('Finds the greatest common divisor for a and b')
     .action((a, b) =>

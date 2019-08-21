@@ -34,16 +34,25 @@ Now you are ready to use this package from every shell on your computer!
 
 # Documentation
 
-- [sum, add](#sum,-add)
-Sum up numbers
+- [greatest-common-divisor, gcd](#greatest-common-divisor,-gdc)
 
-### sum, add
+## greatest-common-divisor, gcd
 
-    math sum 1 2 3
-    = 6
+Finds the greatest common divisor for `a` and `b`
+
+    math greatest-common-divisor/gcd <a> <b>
     
-Sums up different numbers
-
+    <a>:= Not null or negative Integer Number
+    <b>:= Not null or negative Integer Number
+    
+Examples:
+    
+    math gcd 120 5
+    // result = 5
+    
+    math gcd 16 4
+    // result = 4
+    
 # Development
 
 ## Testing
