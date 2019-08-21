@@ -16,7 +16,7 @@ program
     .action((numbers) => {
         // Parse arguments to numbers
         numbers = numbers.map(Number);
-        console.log(Calculator.sum.apply(this, numbers))
+        console.log(`Result => ${Calculator.sum.apply(this, numbers)}`);
     });
 
 program
@@ -25,7 +25,7 @@ program
     .alias('greatest-common-divisor')
     .description('Finds the greatest common divisor for a and b')
     .action((a, b, cmdObj) => {
-        console.log(Calculator.greatestCommonDivisor(a, b, cmdObj.visualize))
+        console.log(`Result => ${Calculator.greatestCommonDivisor(a, b, cmdObj.visualize)}`);
     });
 
 program.parse(process.argv);

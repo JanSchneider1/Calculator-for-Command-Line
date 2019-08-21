@@ -66,6 +66,10 @@ Finds the greatest common divisor for `a` and `b`
     
     <a>:= Not zero or negative Integer Number
     <b>:= Not zero or negative Integer Number
+
+Options:
+    
+    --visualize/-v -> Outputs calculation to console
     
 Examples:
     
@@ -74,6 +78,18 @@ Examples:
     
     math gcd 16 4
     // result = 4
+    
+    math gcd 34 20 --visualize
+    /* outputs:
+    34 % 20 = 14
+      /    /
+    20 % 14 = 6
+      /    /
+    14 % 6 = 2
+      /    /
+    6 % 2 = 0
+    Result => 2
+    */
     
 # Development
 
