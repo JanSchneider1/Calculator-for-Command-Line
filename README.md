@@ -73,15 +73,22 @@ Examples:
     
 # Development
 
+## Setup
+
+First you have to link the package to your global package
+
+    npm link
+    
+Create a watcher to watch over your written Typescript. The compiled JavaScript
+can be found in ./build/js . You have to run following command:
+
+    tsc --watch
+
 ## Testing
 
 You can find the test in the "/test" directory
 
 To run the tests simply use
-
-    jest
-    
-or use
 
     npm run test
     
