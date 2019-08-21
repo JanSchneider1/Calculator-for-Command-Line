@@ -19,7 +19,7 @@ and learning tool for the following technologies:
 - ![TypeScript](https://www.typescriptlang.org/) a JavaScript super set making it type sensitive
 - ![Jest](https://www.typescriptlang.org/) a JavaScript and TypeScript Testing Framework
 
-If you have interesting ideas or want to try developing you self feel free to contribute :)
+If you have interesting ideas or want to try developing yourself feel free to contribute :)
 
 # How to install
 
@@ -34,7 +34,25 @@ Now you are ready to use this package from every shell on your computer!
 
 # Documentation
 
+- [add, sum](#add,-sum)
 - [greatest-common-divisor, gcd](#greatest-common-divisor,-gdc)
+
+## sum, add
+
+Calculates the sum of the given numbers
+
+    math add/sum <numbers...>
+    
+    <numbers...> := (1 or more) Not negative numbers,
+     that can be zero or point numbers, seperated with a space
+    
+Examples:
+    
+    math add 1 2 3
+    // result = 6
+    
+    math add 0.5 1 1.5 0.5
+    // result = 3.5
 
 ## greatest-common-divisor, gcd
 
@@ -42,8 +60,8 @@ Finds the greatest common divisor for `a` and `b`
 
     math greatest-common-divisor/gcd <a> <b>
     
-    <a>:= Not null or negative Integer Number
-    <b>:= Not null or negative Integer Number
+    <a>:= Not zero or negative Integer Number
+    <b>:= Not zero or negative Integer Number
     
 Examples:
     

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-import { Calculator } from './calculator';
+import { Calculator } from './Calculator';
 
 program
     .version('0.0.1');
@@ -11,6 +11,8 @@ program
     .alias('sum')
     .description('Add multiple numbers and return result')
     .action((numbers) => {
+        // Parse arguments to numbers
+        numbers = numbers.map(Number);
         console.log(Calculator.sum.apply(this, numbers))
     });
 

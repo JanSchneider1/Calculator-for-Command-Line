@@ -1,9 +1,9 @@
 export class Calculator{
     static sum(...numbers){
-        if (numbers.length === 0){
+        if (numbers.length == 0){
             throw new Error("No arguments given");
         }
-        return numbers.reduce((total, num) => {return total + Math.round(num);}, 0);
+        return numbers.reduce((total, number) => total + number, 0);
     }
 
     static greatestCommonDivisor(a: number, b: number){

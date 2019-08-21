@@ -1,8 +1,23 @@
-import { Calculator } from '../src/typescript/calculator';
+import { Calculator } from '../src/typescript/Calculator';
 
 describe('Test sum function',() => {
-    test('Calling sum function without any arguments should throw error', () => {
-        expect(() => { Calculator.sum() }).toThrow();
+    test('Throw error when arguments are empty', () => {
+        expect(() => { Calculator.sum() })
+            .toThrow("No arguments given");
+    });
+    test.each`
+    numbers                 | expectedResult
+    ${[1, 2, 3]}            ${6}
+    ${[10, 20, 3, 7, 30]}   ${70}
+    ${[0, 0, 0]}            ${0}
+    ${[-1, -10, 10, 1]}     ${0}
+    ${[-1, -10, -100, -2]}  ${-113}
+    ${[-1, -0.5]}           ${-1.5}
+    ${[2.5, 1.5, 0.5]}      ${4.5}
+    ${[10, 0.5, 1.5, 0.5]}  ${12.5}
+    ${[10, 0.5, 1.5]}       ${12}
+    `('The sum of following numbers: $numbers is $expectedResult', ({ numbers, expectedResult }) => {
+        expect(Calculator.sum.apply(this, numbers)).toBe(expectedResult);
     });
 });
 
