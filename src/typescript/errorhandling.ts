@@ -5,12 +5,14 @@
  * Set process.env.mode to 'development' in "./test" files
  * Set process.env.mode to 'production' in "./src/typescript/commands.ts"
  */
+const chalk = require('chalk');
+
 export function throwError(message){
     if (process.env.mode == "development"){
         throw new Error(message);
     }
     else{
-        console.log('(╯°□°)╯︵ Error: ' + message);
+        console.log(chalk.red('(╯°□°)╯︵ Error: ' + message));
         process.exit();
     }
 }

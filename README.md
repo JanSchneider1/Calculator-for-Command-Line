@@ -19,6 +19,10 @@ and learning tool for the following technologies:
 - ![TypeScript](https://www.typescriptlang.org/) a JavaScript super set making it type sensitive
 - ![Jest](https://www.typescriptlang.org/) a JavaScript and TypeScript Testing Framework
 
+The project also uses interesting command line tools like:
+
+-[Chalk][https://github.com/chalk/chalk] Colored and styled console output
+
 If you have interesting ideas or want to try developing yourself feel free to contribute :)
 
 # How to install
