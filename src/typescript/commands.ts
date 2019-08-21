@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const { MyMath } = require('./mymath');
+import { MyMath } from './mymath';
 
 program
     .version('0.0.1');

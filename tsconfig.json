@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
     "outDir": "./build/js",
     "rootDir": "./src/typescript"
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "test"
+  ]
 }
