@@ -1,9 +1,11 @@
 import { Calculator } from '../src/typescript/Calculator';
 
+process.env.mode = "development";
+
 describe('Test sum function',() => {
     test('Throw error when arguments are empty', () => {
         expect(() => { Calculator.sum() })
-            .toThrow("No arguments given");
+            .toThrow("no arguments given");
     });
     test.each`
     numbers                 | expectedResult

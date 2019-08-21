@@ -3,6 +3,9 @@
 const program = require('commander');
 import { Calculator } from './Calculator';
 
+// Set to 'production' to disable error message
+process.env.mode = "production";
+
 program
     .version('0.0.1');
 
@@ -18,10 +21,11 @@ program
 
 program
     .command('gcd <a> <b>')
+    .option('-v, --visualize', "Visualize calculation in console")
     .alias('greatest-common-divisor')
     .description('Finds the greatest common divisor for a and b')
-    .action((a, b) =>
-        console.log(Calculator.greatestCommonDivisor(a, b))
-    );
+    .action((a, b, cmdObj) => {
+        console.log(Calculator.greatestCommonDivisor(a, b, cmdObj.visualize))
+    });
 
 program.parse(process.argv);
