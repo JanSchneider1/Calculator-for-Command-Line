@@ -1,7 +1,7 @@
 {
   "name": "math",
   "preferGlobal": true,
-  "bin": "./src/js/commands.js",
+  "bin": "./build/js/commands.js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^12.7.2",
     "commander": "^3.0.0",
-    "inquirer": "^6.5.1"
+    "inquirer": "^6.5.1",
+    "typescript": "^3.5.3"
   }
 }
