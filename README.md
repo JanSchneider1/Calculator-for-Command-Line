@@ -21,7 +21,7 @@ and learning tool for the following technologies:
 
 The project also uses interesting command line tools like:
 
--[Chalk][https://github.com/chalk/chalk] Colored and styled console output
+- ![Chalk](https://github.com/chalk/chalk) Colored and styled console output
 
 If you have interesting ideas or want to try developing yourself feel free to contribute :)
 
